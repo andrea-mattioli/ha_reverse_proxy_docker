@@ -1,5 +1,5 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG ARCH=
+FROM alpine
 
 RUN mkdir /mattiols_reverse_proxy
 
