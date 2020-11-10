@@ -72,4 +72,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            amattioli2/ha_reverse_proxy:linux/arm64
+            amattioli2/ha_reverse_proxy:arm64
