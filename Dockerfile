@@ -1,10 +1,6 @@
 ARG ARCH=
 FROM alpine
-ENV TZ=Europe/Rome \
-    DOMAIN=changeme \
-    TOKEN=changeme \
-    HAIP=changeme
-RUN env
+ENV TZ=Europe/Rome
 RUN mkdir /mattiols_reverse_proxy
 
 WORKDIR /mattiols_reverse_proxy
