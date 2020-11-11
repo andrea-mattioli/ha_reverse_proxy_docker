@@ -1,9 +1,9 @@
 ARG ARCH=
 FROM alpine
 ENV TZ=Europe/Rome
-ENV DOMAIN="my home domain example.duckdns.org"
-ENV TOKEN="duckDNS token"
-ENV HAIP="my ha local ip 192.168.1.x"
+ENV DOMAIN=changeme
+ENV TOKEN=changeme
+ENV HAIP=changeme
 RUN mkdir /mattiols_reverse_proxy
 
 WORKDIR /mattiols_reverse_proxy
