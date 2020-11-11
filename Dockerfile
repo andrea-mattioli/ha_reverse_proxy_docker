@@ -1,6 +1,9 @@
 ARG ARCH=
 FROM alpine
-
+ENV TZ=Europe/Rome
+ENV DOMAIN="my home domain example.duckdns.org"
+ENV TOKEN="duckDNS token"
+ENV HAIP="my ha local ip 192.168.1.x"
 RUN mkdir /mattiols_reverse_proxy
 
 WORKDIR /mattiols_reverse_proxy
@@ -14,12 +17,11 @@ RUN apk add --no-cache \
         nginx \
         certbot \
         certbot-nginx
-ENV TZ=Europe/Rome
+
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY run.sh /mattiols_reverse_proxy
 COPY data/nginx.conf* /etc/nginx/
 COPY data/check_cert.py /mattiols_reverse_proxy/
-
 RUN chmod a+x /mattiols_reverse_proxy/run.sh
 
 RUN pip3 install noipy
