@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#! /bin/bash
 echo "MY VARIABLES:"
 echo ${TOKEN}
 echo ${DOMAIN}
