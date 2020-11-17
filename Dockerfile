@@ -1,6 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:latest
-
-FROM ${BUILD_FROM}
+FROM alpine:latest
 
 ENV LANG C.UTF-8
 RUN mkdir /mattiols_reverse_proxy
@@ -14,6 +12,7 @@ RUN apk add --no-cache \
         openssl \
         nginx \
         certbot \
+        chrony \
         certbot-nginx
 
 COPY run.sh /mattiols_reverse_proxy
