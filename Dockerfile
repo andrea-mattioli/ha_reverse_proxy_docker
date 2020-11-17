@@ -1,5 +1,8 @@
-ARG ARCH=
-FROM alpine
+ARG BUILD_FROM=hassioaddons/base:latest
+
+FROM ${BUILD_FROM}
+
+ENV LANG C.UTF-8
 RUN mkdir /mattiols_reverse_proxy
 
 WORKDIR /mattiols_reverse_proxy
