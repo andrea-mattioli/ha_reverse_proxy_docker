@@ -12,7 +12,6 @@ RUN apk add --no-cache \
         openssl \
         nginx \
         certbot \
-        chrony \
         certbot-nginx
 
 COPY run.sh /mattiols_reverse_proxy
