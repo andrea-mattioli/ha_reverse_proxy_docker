@@ -1,6 +1,6 @@
 ARG ARCH=
 FROM alpine:latest
-COPY --from=amattioli2/alpine_faketime:$ARCH  /faketime.so /lib/faketime.so
+COPY --from=amattioli2/alpine_faketime  /faketime.so /lib/faketime.so
 ENV LD_PRELOAD=/lib/faketime.so
 ENV LANG C.UTF-8
 RUN mkdir /mattiols_reverse_proxy
