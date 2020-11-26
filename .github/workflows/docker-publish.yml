@@ -32,7 +32,7 @@ jobs:
           platforms: linux/386
           push: true
           tags: amattioli2/ha_reverse_proxy:i386
-          build-args: ARCH=i386
+          build-args: BASE=amattioli2/alpine_faketime:i386
       -
         name: Build and push amd64
         uses: docker/build-push-action@v2
@@ -42,7 +42,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: amattioli2/ha_reverse_proxy:amd64
-          build-args: ARCH=amd64
+          build-args: BASE=amattioli2/alpine_faketime:amd64
       -
         name: Build and push armv6
         uses: docker/build-push-action@v2
@@ -52,7 +52,7 @@ jobs:
           platforms: linux/arm/v6
           push: true
           tags: amattioli2/ha_reverse_proxy:armv6
-          build-args: ARCH=armv6
+          build-args: BASE=amattioli2/alpine_faketime:armv6
       -
         name: Build and push armv7
         uses: docker/build-push-action@v2
@@ -62,7 +62,7 @@ jobs:
           platforms: linux/arm/v7
           push: true
           tags: amattioli2/ha_reverse_proxy:armv7
-          build-args: ARCH=armv7
+          build-args: BASE=amattioli2/alpine_faketime:armv7
       -
         name: Build and push arm64
         uses: docker/build-push-action@v2
@@ -72,4 +72,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: amattioli2/ha_reverse_proxy:arm64
-          build-args: ARCH=armv64
+          build-args: BASE=amattioli2/alpine_faketime:armv64
