@@ -1,5 +1,5 @@
 ARG ARCH=
-FROM alpine:latest
+FROM ${ARCH}/alpine
 COPY --from=amattioli2/alpine_faketime  /faketime.so /lib/faketime.so
 ENV LD_PRELOAD=/lib/faketime.so
 ENV LANG C.UTF-8
