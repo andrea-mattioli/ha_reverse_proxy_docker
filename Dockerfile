@@ -1,7 +1,7 @@
 ARG BASE=
+FROM ${BASE} AS my_repo
 FROM alpine:latest
-FROM ${BASE} AS base
-COPY --from=base  /faketime.so /lib/faketime.so
+COPY --from=my_repo /faketime.so /lib/faketime.so
 ENV LD_PRELOAD=/lib/faketime.so
 ENV LANG C.UTF-8
 RUN mkdir /mattiols_reverse_proxy
